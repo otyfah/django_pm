@@ -28,7 +28,8 @@ class Projects(models.Model):
     update_at = models.DateTimeField(auto_now=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     user = models.ForeignKey(
-        AUTH_USER_MODEL, on_delete=models.CASCADE
+        AUTH_USER_MODEL, on_delete=models.CASCADE,
+        null=True
     )
 
     def __str__(self):
